@@ -6,6 +6,10 @@
 ### Introdução aos jogos 2D
 Os jogos 2D são caracterizados por sua representação visual em duas dimensões, geralmente exibidos em um plano X-Y. Esses jogos têm uma longa história na indústria de videogames e continuam sendo populares devido à sua simplicidade, charme nostálgico e potencial para gameplay inovador [[Fábrica de jogos](https://www.fabricadejogos.net/posts/mecanica-de-jogos-parte-1/), [iMasters](https://imasters.com.br/desenvolvimento/conhecendo-mecanica-de-jogos-parte-01)].
 
+```python
+{!..modulos/scripts/g01_rectangle.py!}
+```
+
 **Características principais dos jogos 2D:**
 - Gráficos baseados em sprites ou vetores
 - Movimento limitado a um plano bidimensional
