@@ -1,0 +1,27 @@
+# nomes
+GAME_NAME = 'GAME 03'
+
+# Cores
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+BLUE = (0, 0, 255)
+
+# screen
+SCREEN_WIDTH = 960
+SCREEN_HEIGHT = 720
+MARGIN = 10
+MARGIN_OVER = 50
+MARGIN_SIZE = 2
+FPS = 60
+
+# design
+GAME_NAME_POSITION = (10,15)
+HEALTH_POSITION = (800,15)
+
+# player
+PLAYER_COLOR = BLUE
+
+# enemies
+ENEMY_HEIGHT = 5
+ENEMY_COLOR = RED
