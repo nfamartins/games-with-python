@@ -1,17 +1,19 @@
 import pygame
 import random
-from src03.player import Player
-from src03.settings import *
+# from srcP1.player import Player
+from srcP1.labirinto import Labirinto
+from srcP1.settings import *
 
 class Game:
     def __init__(self):  # configuração inicial
         pygame.init() 
-        pygame.display.set_caption("Game 03") 
+        pygame.display.set_caption("JOGO DO LABIRINTO") 
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         self.clock = pygame.time.Clock()
         self.running = True
-        self.player = Player()
+        # self.player = Player()
         self.enemies = RandomEnemies()
+        self.labirinto = Labirinto()
         self.enemies_collision = False
         self.FONT_DISPLAY = pygame.font.Font(None, 36)
     
@@ -31,14 +33,14 @@ class Game:
                 if event.key == pygame.K_ESCAPE:
                     self.running = False
         self.get_controls() # Movimento contínuo baseado nas teclas pressionadas
-        self.check_collisions()
+        # self.check_collisions()
         
     
     def get_controls(self):
         # Movimento contínuo baseado nas teclas pressionadas
         keys = pygame.key.get_pressed()
-        self.player.dx = keys[pygame.K_RIGHT] - keys[pygame.K_LEFT]
-        self.player.dy = keys[pygame.K_DOWN] - keys[pygame.K_UP]
+        # self.player.dx = keys[pygame.K_RIGHT] - keys[pygame.K_LEFT]
+        # self.player.dy = keys[pygame.K_DOWN] - keys[pygame.K_UP]
     
     def check_collisions(self):
         enemies = self.enemies.objects
@@ -51,7 +53,7 @@ class Game:
 
 
     def update(self):
-        self.player.update()
+        # self.player.update()
         if self.enemies_collision:
             self.enemies_collision = False
 
@@ -70,15 +72,16 @@ class Game:
         self.screen.blit(self.FONT_DISPLAY.render(GAME_NAME, False, WHITE),
                          GAME_NAME_POSITION)
         # health
-        self.screen.blit(self.FONT_DISPLAY.render(f"Health: {self.player.health}", False, WHITE),
-                         HEALTH_POSITION)
+        # self.screen.blit(self.FONT_DISPLAY.render(f"Health: {self.player.health}", False, WHITE),
+        #                  HEALTH_POSITION)
         
     def draw(self):                 # tela principal
-        self.screen.fill(BLACK) # fundo preto
-        self.draw_margins() # margens
-        self.draw_display() # display
-        self.player.draw(self.screen) # player
-        self.enemies.draw(self.screen)
+        self.screen.fill(BLACK)          # fundo preto
+        self.draw_margins()              # margens
+        self.draw_display()              # display
+        # self.player.draw(self.screen)    # player
+        self.labirinto.draw(self.screen) # labirinto
+        # self.enemies.draw(self.screen)
 
 class RandomEnemies:
     def __init__(self,n=5,size=ENEMY_HEIGHT,color=ENEMY_COLOR):

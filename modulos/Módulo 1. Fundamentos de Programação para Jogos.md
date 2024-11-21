@@ -275,26 +275,26 @@ pip install pygame
 Já vimos anteriormente a estrutura básica do jogo. Basicamente consiste em configurar a tela, e dentro do loop de jogo definir a lógica e atualizar os frames:
 
 ```python
-import pygame 
-
-pygame.init() 
-
-# Configuração da tela 
-screen = pygame.display.set_mode((800, 600)) 
-pygame.display.set_caption("Meu Primeiro Jogo Pygame") 
-# Loop principal do jogo 
-running = True 
-while running:     
-	for event in pygame.event.get():
-		if event.type == pygame.QUIT:
-			running = False     
-	# Lógica do jogo aqui   
-	  
-	# Renderização    
-	screen.fill((0, 0, 0))  # Preenche a tela com preto    
+	import pygame 
 	
-	pygame.display.flip() 
-pygame.quit()
+	pygame.init() 
+	
+	# Configuração da tela 
+	screen = pygame.display.set_mode((800, 600)) 
+	pygame.display.set_caption("Meu Primeiro Jogo Pygame") 
+	# Loop principal do jogo 
+	running = True 
+	while running:     
+		for event in pygame.event.get():
+			if event.type == pygame.QUIT:
+				running = False     
+		# Lógica do jogo aqui   
+		  
+		# Renderização    
+		screen.fill((0, 0, 0))  # Preenche a tela com preto    
+		
+		pygame.display.flip() 
+	pygame.quit()
 ```
 
 ### Controle de Gráficos
@@ -347,17 +347,17 @@ screen.blit(image, (300, 300))
 
 3. **Renderização de texto:** [g04_renderizando_texto.py](modulos/scripts/g04_renderizando_texto.py)
 ```python
-# definindo a fonte (nome da fonte, tamanho)
-# (path da fonte, tamanho)
-font = pygame.font.Font(None,36)
-
-# renderizando a fonte
-# (texto, anti-aliasing, cor)
-text = font.render("Olá, novo dev!", True, (255,255,255))
-
-# desenha/blita o texto renderizado na tela
-# (texto, posicao)
-screen.blit(text, (400,400))
+	# definindo a fonte (nome da fonte, tamanho)
+	# (path da fonte, tamanho)
+	font = pygame.font.Font(None,36)
+	
+	# renderizando a fonte
+	# (texto, anti-aliasing, cor)
+	text = font.render("Olá, novo dev!", True, (255,255,255))
+	
+	# desenha/blita o texto renderizado na tela
+	# (texto, posicao)
+	screen.blit(text, (400,400))
 ```
 
 - O parâmetro `True` ativa o anti-aliasing, que suaviza as bordas do texto.
@@ -628,7 +628,7 @@ pygame.quit()
 ```
 
 
-## Conclusão
+### Conclusão
 
 Pygame oferece uma ampla gama de funcionalidades para criar jogos e aplicações multimídia em Python. Esta introdução cobre os conceitos básicos de gráficos e eventos, fornecendo uma base sólida para começar a desenvolver jogos simples.
 
@@ -807,13 +807,55 @@ if check_circle_collision(circle1, circle2):
 ```
 
 ### Aplicando ao jogo
-Neste momento, já iremos reorganizar nosso código. Alterações
-- Criação do arquivo setings.py com os parâmetros do jogo:
+Neste momento, já iremos reorganizar nosso código. Alterações:
+- Criação do arquivo [setings.py](src03/settings.py) com os parâmetros do jogo
+- Criação da classe de inimigos (em posições aleatórias):
 	```python
+	class RandomEnemies:
+	    def __init__(self,n=5,size=ENEMY_HEIGHT,color=ENEMY_COLOR):
+	        self.size = size
+	        self.n = n
+	        self.create()
+	        
+	    def create(self):
+	        self.objects = []
+	        for i in range(self.n):
+	            x = random.randint(MARGIN, SCREEN_WIDTH - MARGIN)
+	            y = random.randint(MARGIN_OVER, SCREEN_HEIGHT - MARGIN_OVER)
+	          self.objects.append(pygame.Rect(x,y,self.size,self.size))
 	
+	    def draw(self,screen):
+	        for object in self.objects:
+	            pygame.draw.rect(screen, RED, object)
 	```
-## 2.4. Trabalhar com coordenadas para movimento em um ambiente 2D
+- Chamar o RandomEneminies.draw() no método .draw() da classe Game(), no [game.py](src03/game.py)
+- Adicionar uma função para verificar a colisão do player com "inimigos" na classe Player:
+```python
+def check_collision_enemy(self, enemy):
+        # enemy == retângulo
+        expanded_enemy = enemy.inflate(self.radius * 2, self.radius * 2)
+        return expanded_enemy.collidepoint(self.x, self.y)
+```
+- Adicionar método para chegar se houve colisões na classe Game:
+```python
+def check_collisions(self):
+        enemies = self.enemies.objects
+        index = 0
+        for enemy in enemies:
+            if self.player.check_collision_enemy(enemy):
+                del self.enemies.objects[index]
+                self.enemies_collision = True
+            index += 1
+```
+- Criar parâmetro e atualizar a colisão no método update também da classe Game:
+```python
+def update(self):
+        self.player.update()
+        if self.enemies_collision:
+            self.enemies_collision = False
+```
 
+Jogo final: [main.py](game03.py), [player.py](src03/player.py), [game.py](src02/game.py)
 
 # Projeto
 **Jogo de Labirinto**: O jogador navega em um labirinto simples, coletando itens para escapar. Esse projeto ajudará a consolidar a base de movimento e colisão.
