@@ -16,7 +16,7 @@
 
 ---
 
-### [Módulo 02. Construção de Cenários e Pixel Art](modulos\Módulo%2002.%20Construção%20de%20Cenários%20e%20Pixel%20Art.md)
+### [Módulo 02. Construção de Cenários e Pixel Art](modulos/Módulo%2002.%20Construção%20de%20Cenários%20e%20Pixel%20Art.md)
 
 1. Teoria
 	1. Conceitos de pixel art e como aplicá-los em Python
