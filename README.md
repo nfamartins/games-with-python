@@ -1,7 +1,7 @@
 # games-with-python
 
 ---
-### **[Módulo 1. Fundamentos do desenvolvimento de jogos em python](modulos\Módulo 01. Fundamentos do desenvolvimento de jogos em python.md)**
+### [Módulo 1. Fundamentos do desenvolvimento de jogos em python](modulos/Módulo%2001.%20Fundamentos%20do%20desenvolvimento%20de%20jogos%20em%20python.md)
 
 1. **Teoria**
 	1. Conceitos básicos de jogos 2D e mecânicas de jogo
@@ -16,7 +16,7 @@
 
 ---
 
-### [Módulo 02. Construção de Cenários e Pixel Art](modulos\Módulo 02. Construção de Cenários e Pixel Art.mdd)
+### [Módulo 02. Construção de Cenários e Pixel Art](modulos\Módulo 02. Construção de Cenários e Pixel Art.md)
 
 1. Teoria
 	1. Conceitos de pixel art e como aplicá-los em Python
