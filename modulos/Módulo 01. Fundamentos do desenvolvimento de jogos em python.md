@@ -1,5 +1,4 @@
 [&larr; voltar para início](../README.md)
-
 # 1. Teoria
 ## 1.1. Conceitos básicos de jogos 2D e mecânicas de jogo
 
@@ -859,3 +858,9 @@ Jogo final: [main.py](game03.py), [player.py](src03/player.py), [game.py](src02/
 
 # Projeto
 **Jogo de Labirinto**: O jogador navega em um labirinto simples, coletando itens para escapar. Esse projeto ajudará a consolidar a base de movimento e colisão.
+Scripts:
+- [main.py](projeto01.py)
+- [game.py](srcP1/game.py)
+- [maze.py](srcP1/maze.py)
+- [player.py](srcP1/player.py)
+- [settings.py](srcP1/)

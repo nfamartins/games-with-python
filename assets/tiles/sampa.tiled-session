@@ -1,0 +1,44 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "antigo_tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "atual_tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "distopico_tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "mapa.tmx": {
+            "scale": 1.0776562499999998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 479.744816586922,
+                "y": 256.57532260403076
+            }
+        }
+    },
+    "last.imagePath": "D:/nfama/github/games-with-python/assets/tiles",
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+    ],
+    "project": "sampa.tiled-project",
+    "recentFiles": [
+        "mapa.tmx",
+        "antigo_tileset.tsx",
+        "distopico_tileset.tsx",
+        "atual_tileset.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

@@ -1,7 +1,7 @@
 # games-with-python
 
 ---
-### **[Módulo 1. Fundamentos de Programação para Jogos](modulos/Módulo%201.%20Fundamentos%20de%20Programação%20para%20Jogos.md)**
+### **[Módulo 1. Fundamentos do desenvolvimento de jogos em python](Módulo%2001.%20Fundamentos%20do%20desenvolvimento%20de%20jogos%20em%20python.md)**
 
 1. **Teoria**
 	1. Conceitos básicos de jogos 2D e mecânicas de jogo
@@ -16,23 +16,18 @@
 
 ---
 
-### **Módulo 2: Construção de Cenários e Pixel Art**
+### [Módulo 02. Construção de Cenários e Pixel Art](Módulo%2002.%20Construção%20de%20Cenários%20e%20Pixel%20Art.md)
 
-#### Teoria
-
-- Conceitos de pixel art e como aplicá-los em Python
-- Mapas em 2D: criação de cenários, tilesets e mapas baseados em grade
-- Introdução a ferramentas como **Tiled** para criação de mapas e como importá-los no Pygame
-
-#### Prática
-
-- Criar um cenário básico de cidade em pixel art
-- Implementar mapas e movimentação do jogador pelo cenário
-- Colocar barreiras e objetos para dar uma sensação de espaço e profundidade
-
-#### Projeto
-
-**Exploração Urbana**: Um cenário simples de cidade com interações mínimas. O jogador explora a área e aprende a navegar em um ambiente maior.
+1. Teoria
+	1. Conceitos de pixel art e como aplicá-los em Python
+	2. Mapas em 2D: criação de cenários, tilesets e mapas baseados em grade
+	3. Introdução a ferramentas como **Tiled** para criação de mapas e como importá-los no Pygame
+2. Prática
+	1. Criar um cenário básico de cidade em pixel art
+	2. Implementar mapas e movimentação do jogador pelo cenário
+	3. Colocar barreiras e objetos para dar uma sensação de espaço e profundidade
+3. Projeto
+	1. **Exploração Urbana**: Um cenário simples de cidade com interações mínimas. O jogador explora a área e aprende a navegar em um ambiente maior.
 
 ---
 
