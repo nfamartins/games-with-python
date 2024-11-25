@@ -1,5 +1,6 @@
-Bem-vindo ao segundo módulo do nosso curso de desenvolvimento de jogos em Python! Vamos explorar os conceitos fundamentais de pixel art e como aplicá-los utilizando Python. A pixel art é uma forma de arte digital que tem sido amplamente utilizada no desenvolvimento de jogos, especialmente em títulos indie e retro.
+[&larr; voltar para início](../README.md)
 
+Bem-vindo ao segundo módulo do nosso curso de desenvolvimento de jogos em Python! Vamos explorar os conceitos fundamentais de pixel art e como aplicá-los utilizando Python. A pixel art é uma forma de arte digital que tem sido amplamente utilizada no desenvolvimento de jogos, especialmente em títulos indie e retro.
 
 # 1. Teoria
 ## 1.1 Conceitos de pixel art e como aplicá-los em Python
