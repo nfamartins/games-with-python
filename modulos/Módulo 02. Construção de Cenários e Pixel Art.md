@@ -668,7 +668,14 @@ Desvantagens:
 ### Como Utilizar o [Tiled](https://www.mapeditor.org/)
 Antes de iniciar com o Tiled, tenha em mente que você precisará criar os seus tiles e tisets em outra ferramenta para então poder importar no programa para a criação de mapas e mundos.
 
+Algumas ferramentas fáceis e gratuitas para produzir tiles:
+1. Piskel: Um editor de pixel art online e gratuito que roda diretamente no navegador. Permite criar animações, exportar PNG e GIF, e visualizar o resultado em tempo real.
+2. Pixilart: Uma aplicação web gratuita com interface simples. Além de criar pixel art, você pode salvar suas criações online e compartilhá-las em redes sociais.
+3. Lospec Pixel Editor: Um editor web simples, ideal para iniciantes. O site também oferece tutoriais e paletas de cores.
+4. GIMP: Um software de edição de imagens gratuito e de código aberto, disponível para Windows, Mac e Linux. Embora não seja exclusivo para pixel art, possui as ferramentas necessárias para criar tiles.
+5. Piq: Uma ferramenta online com interface simples, mas que oferece opções avançadas como modo isométrico e ferramenta de dithering.
 
+**Criando mapas**
 1. **Criação de um novo projeto**
 2. **Criação de um Novo Mapa**:
     - Abra o Tiled e selecione "File" > "New" > "New Map".
