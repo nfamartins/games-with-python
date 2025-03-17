@@ -1,5 +1,11 @@
 # games-with-python
 
+Salve!
+Este é um repositório em construção, os módulos e os scripts serão construídos e adicionados gradativamente.
+Fique à vontade para navegar no conteúdo.
+
+Abraços.
+
 ---
 ### [Módulo 1. Fundamentos do desenvolvimento de jogos em python](modulos/Módulo%2001.%20Fundamentos%20do%20desenvolvimento%20de%20jogos%20em%20python.md)
 
